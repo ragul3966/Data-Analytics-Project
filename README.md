@@ -71,8 +71,8 @@ select distinct category from retail_sales;
 ```
 **All transactions where the category is 'Clothing' and the quantity sold is more than 10 in the month of Nov-2022**
 ```sql
-   select * from retail_sales
-   where category = 'Clothing' and YEAR(sale_date) = '2022' and month(sale_date) = '11' and quantity > 10;
+select * from retail_sales
+where category = 'Clothing' and YEAR(sale_date) = '2022' and month(sale_date) = '11' and quantity > 10;
 ```                          
 **Calculation of total sales for each category.**
 ```sql
@@ -126,8 +126,8 @@ select top 5
 
 **Number of unique customers who purchased items from each category.**
 ```sql
- select  category ,
-            count(distinct(customer_id))
+select  category ,
+        count(distinct(customer_id))
 from retail_sales
 group by category ;
 ```
